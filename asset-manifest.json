@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reactCounterHooks/static/css/main.7ca36dca.css",
+    "main.js": "/reactCounterHooks/static/js/main.3b9a200b.js",
+    "index.html": "/reactCounterHooks/index.html",
+    "main.7ca36dca.css.map": "/reactCounterHooks/static/css/main.7ca36dca.css.map",
+    "main.3b9a200b.js.map": "/reactCounterHooks/static/js/main.3b9a200b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ca36dca.css",
+    "static/js/main.3b9a200b.js"
+  ]
+}
