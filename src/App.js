@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import './style.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [myNum, setMyNum] = useState(0);
 
-export default App;
+  useEffect(()=>{
+    console.log("This is the useEffect Hook message");
+    document.title = `chat: ${myNum}`;
+    
+  });
+  //},[]);  For dependency
+
+    return (
+    <>
+        <div className='heading_style'>
+          <h2>Counter App with React Hooks: useState, useEffect</h2>
+        </div>
+        
+        <div className='container'>
+          <p className='output'>{myNum}</p>
+          <button className="button" onClick={()=>{
+           return setMyNum(myNum+1);
+          }}>INCR</button>
+          <span></span>
+                 
+          <button className="button" onClick={()=>{
+            return (
+            <>
+              {myNum > 0?setMyNum(myNum-1):setMyNum(0)};
+            </>
+            );
+          }}>DECR</button>
+          <span></span>
+          
+        </div>
+        
+    </>
+  )
+};
+
+export default App
